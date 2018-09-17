@@ -1,0 +1,794 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/orders/templates/orders/order/create.html",
+			"settings":
+			{
+				"buffer_size": 924,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "myshop/orders/models.py",
+			"settings":
+			{
+				"buffer_size": 1532,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "myshop/orders/views.py",
+			"settings":
+			{
+				"buffer_size": 2316,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 1845 files for \"csv\"\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_internal\\req\\req_uninstall.py:\n    1  from __future__ import absolute_import\n    2  \n    3: import csv\n    4  import functools\n    5  import logging\n    .\n   65      UninstallPathSet.add() takes care of the __pycache__ .py[co].\n   66      \"\"\"\n   67:     r = csv.reader(FakeFile(dist.get_metadata_lines('RECORD')))\n   68      for row in r:\n   69          path = os.path.join(dist.location, row[0])\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_internal\\wheel.py:\n    6  import collections\n    7  import compileall\n    8: import csv\n    9  import hashlib\n   10  import logging\n   ..\n   65  \n   66  \n   67: def open_for_csv(name, mode):\n   68      if sys.version_info[0] < 3:\n   69          nl = {}\n   ..\n  497      record = os.path.join(info_dir[0], 'RECORD')\n  498      temp_record = os.path.join(info_dir[0], 'RECORD.pip')\n  499:     with open_for_csv(record, 'r') as record_in:\n  500:         with open_for_csv(temp_record, 'w+') as record_out:\n  501:             reader = csv.reader(record_in)\n  502:             writer = csv.writer(record_out)\n  503              for row in reader:\n  504                  row[0] = installed.pop(row[0], row[0])\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_vendor\\certifi\\cacert.pem:\n  561  hvcNAQEBBQADggEPADCCAQoCggEBAJAXSjWdyvANlsdE+hY3/Ei9vX+ALTU74W+o\n  562  Z6m/AxxNjG8yR9VBaKQTBME1DJqEQ/xcHf+Js+gXGM2RX/uJ4+q/Tl18GybTdXnt\n  563: 5oTjV+WtKcT0OijnpXuENmmz/V52vaMtmdOQTiMofRhj8VQ7Jp12W5dCsv+u8E7s\n  564  3TmVToMGf+dJQMjFAbJUWmYdPfz56TwKnoG4cPABi+QjVHzIrviQHgCWctRUz2Ej\n  565  vOr7nQKV0ba5cTppCD8PtOFCx4j1P5iop7oc4HFx71hXgVB6XGt0Rg6DA5jDjqhu\n  ...\n 2273  -----BEGIN CERTIFICATE-----\n 2274  MIIFuzCCA6OgAwIBAgIIVwoRl0LE48wwDQYJKoZIhvcNAQELBQAwazELMAkGA1UE\n 2275: BhMCSVQxDjAMBgNVBAcMBU1pbGFuMSMwIQYDVQQKDBpBY3RhbGlzIFMucC5BLi8w\n 2276  MzM1ODUyMDk2NzEnMCUGA1UEAwweQWN0YWxpcyBBdXRoZW50aWNhdGlvbiBSb290\n 2277  IENBMB4XDTExMDkyMjExMjIwMloXDTMwMDkyMjExMjIwMlowazELMAkGA1UEBhMC\n ....\n 4101  IEJpbGltc2VsIHZlIFRla25vbG9qaWsgQXJhc3Rpcm1hIEt1cnVtdSAtIFRVQklU\n 4102  QUsxLTArBgNVBAsTJEthbXUgU2VydGlmaWthc3lvbiBNZXJrZXppIC0gS2FtdSBT\n 4103: TTE2MDQGA1UEAxMtVFVCSVRBSyBLYW11IFNNIFNTTCBLb2sgU2VydGlmaWthc2kg\n 4104  LSBTdXJ1bSAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3UwM6q7\n 4105  a9OZLBI3hNmNe5eA027n/5tQlT6QlVZC1xl8JoSNkvoBHToP4mQ4t4y86Ij5iySr\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_vendor\\distlib\\database.py:\n   23  from .metadata import Metadata, METADATA_FILENAME, WHEEL_METADATA_FILENAME\n   24  from .util import (parse_requirement, cached_property, parse_name_and_version,\n   25:                    read_exports, write_exports, CSVReader, CSVWriter)\n   26  \n   27  \n   ..\n  585          r = self.get_distinfo_resource('RECORD')\n  586          with contextlib.closing(r.as_stream()) as stream:\n  587:             with CSVReader(stream=stream) as record_reader:\n  588                  # Base location is parent dir of .dist-info dir\n  589                  #base_location = os.path.dirname(self.path)\n  ...\n  651          r = self.get_distinfo_resource('RESOURCES')\n  652          with contextlib.closing(r.as_stream()) as stream:\n  653:             with CSVReader(stream=stream) as resources_reader:\n  654                  for relative, destination in resources_reader:\n  655                      if relative == relative_path:\n  ...\n  683          if dry_run:\n  684              return None\n  685:         with CSVWriter(record_path) as writer:\n  686              for path in paths:\n  687                  if os.path.isdir(path) or path.endswith(('.pyc', '.pyo')):\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_vendor\\distlib\\util.py:\n    6  from collections import deque\n    7  import contextlib\n    8: import csv\n    9  from glob import iglob as std_iglob\n   10  import io\n   ..\n 1576  \n 1577  #\n 1578: # CSV functionality. This is provided because on 2.x, the csv module can't\n 1579  # handle Unicode. However, we need to deal with Unicode in e.g. RECORD files.\n 1580  #\n 1581  \n 1582: def _csv_open(fn, mode, **kwargs):\n 1583      if sys.version_info[0] < 3:\n 1584          mode += 'b'\n ....\n 1591  \n 1592  \n 1593: class CSVBase(object):\n 1594      defaults = {\n 1595          'delimiter': str(','),      # The strs are used because we need native\n 1596:         'quotechar': str('\"'),      # str in the csv API (2.x won't take\n 1597          'lineterminator': str('\\n') # Unicode)\n 1598      }\n ....\n 1605  \n 1606  \n 1607: class CSVReader(CSVBase):\n 1608      def __init__(self, **kwargs):\n 1609          if 'stream' in kwargs:\n ....\n 1614              self.stream = stream\n 1615          else:\n 1616:             self.stream = _csv_open(kwargs['path'], 'r')\n 1617:         self.reader = csv.reader(self.stream, **self.defaults)\n 1618  \n 1619      def __iter__(self):\n ....\n 1630      __next__ = next\n 1631  \n 1632: class CSVWriter(CSVBase):\n 1633      def __init__(self, fn, **kwargs):\n 1634:         self.stream = _csv_open(fn, 'w')\n 1635:         self.writer = csv.writer(self.stream, **self.defaults)\n 1636  \n 1637      def writerow(self, row):\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_vendor\\distlib\\wheel.py:\n   28  from .database import InstalledDistribution\n   29  from .metadata import Metadata, METADATA_FILENAME, WHEEL_METADATA_FILENAME\n   30: from .util import (FileOperator, convert_path, CSVReader, CSVWriter, Cache,\n   31                     cached_property, get_cache_base, read_exports, tempdir)\n   32  from .version import NormalizedVersion, UnsupportedVersionError\n   ..\n  304          records.append((p, '', ''))\n  305          records.sort()\n  306:         with CSVWriter(record_path) as writer:\n  307              for row in records:\n  308                  writer.writerow(row)\n  ...\n  480              records = {}\n  481              with zf.open(record_name) as bf:\n  482:                 with CSVReader(stream=bf) as reader:\n  483                      for row in reader:\n  484                          p = row[0]\n  ...\n  772              records = {}\n  773              with zf.open(record_name) as bf:\n  774:                 with CSVReader(stream=bf) as reader:\n  775                      for row in reader:\n  776                          p = row[0]\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pip\\_vendor\\pyparsing.py:\n 2627          \n 2628          # any string of non-whitespace characters, except for ','\n 2629:         csv_value = Word(printables, excludeChars=\",\")\n 2630      \"\"\"\n 2631      def __init__( self, initChars, bodyChars=None, min=1, max=0, exact=0, asKeyword=False, excludeChars=None ):\n ....\n 2962      Example::\n 2963          # define a comma-separated-value as anything that is not a ','\n 2964:         csv_value = CharsNotIn(',')\n 2965:         print(delimitedList(csv_value).parseString(\"dkls,lsdkjf,s12 34,@!#,213\"))\n 2966      prints::\n 2967          ['dkls', 'lsdkjf', 's12 34', '@!#', '213']\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py:\n 2608          \n 2609          # any string of non-whitespace characters, except for ','\n 2610:         csv_value = Word(printables, excludeChars=\",\")\n 2611      \"\"\"\n 2612      def __init__( self, initChars, bodyChars=None, min=1, max=0, exact=0, asKeyword=False, excludeChars=None ):\n ....\n 2943      Example::\n 2944          # define a comma-separated-value as anything that is not a ','\n 2945:         csv_value = CharsNotIn(',')\n 2946:         print(delimitedList(csv_value).parseString(\"dkls,lsdkjf,s12 34,@!#,213\"))\n 2947      prints::\n 2948          ['dkls', 'lsdkjf', 's12 34', '@!#', '213']\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\setuptools\\_vendor\\pyparsing.py:\n 2608          \n 2609          # any string of non-whitespace characters, except for ','\n 2610:         csv_value = Word(printables, excludeChars=\",\")\n 2611      \"\"\"\n 2612      def __init__( self, initChars, bodyChars=None, min=1, max=0, exact=0, asKeyword=False, excludeChars=None ):\n ....\n 2943      Example::\n 2944          # define a comma-separated-value as anything that is not a ','\n 2945:         csv_value = CharsNotIn(',')\n 2946:         print(delimitedList(csv_value).parseString(\"dkls,lsdkjf,s12 34,@!#,213\"))\n 2947      prints::\n 2948          ['dkls', 'lsdkjf', 's12 34', '@!#', '213']\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\wheel\\bdist_wheel.py:\n    5  \"\"\"\n    6  \n    7: import csv\n    8  import hashlib\n    9  import os\n   ..\n   21  \n   22  from .pep425tags import get_abbr_impl, get_impl_ver, get_abi_tag, get_platform\n   23: from .util import native, open_for_csv\n   24  from .archive import archive_wheelfile\n   25  from .pkginfo import write_pkg_info\n   ..\n  387              return (path == record_relpath)\n  388  \n  389:         with open_for_csv(record_path, 'w+') as record_file:\n  390:             writer = csv.writer(record_file)\n  391              for path in walk():\n  392                  relpath = os.path.relpath(path, bdist_dir)\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\wheel\\install.py:\n    6  from __future__ import print_function\n    7  \n    8: import csv\n    9  import hashlib\n   10  import os.path\n   ..\n   20  from .pkginfo import read_pkg_info_bytes\n   21  from .util import (\n   22:     urlsafe_b64encode, from_json, urlsafe_b64decode, native, binary, HashingFile, open_for_csv)\n   23  \n   24  try:\n   ..\n  391  \n  392          record_name = os.path.join(root, self.record_name)\n  393:         with open_for_csv(record_name, 'w+') as record_file:\n  394:             writer = csv.writer(record_file)\n  395              for reldest, digest, length in sorted(record_data):\n  396                  writer.writerow((reldest, digest, length))\n  ...\n  428                                                native(record_digest)))\n  429  \n  430:         reader = csv.reader((native(r, 'utf-8') for r in record.splitlines()))\n  431  \n  432          for row in reader:\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\Lib\\site-packages\\wheel\\util.py:\n   48  \n   49  \n   50: def open_for_csv(name, mode):\n   51      if sys.version_info[0] < 3:\n   52          kwargs = {}\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\b3.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\i22.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\i99.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\SO1.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\SO4.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\Webp.net-resizeimage_1_1.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\media\\products\\2018\\07\\30\\Webp.net-resizeimage_2.jpg:\n    <binary>\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\orders\\admin.py:\n    1: import csv\n    2  import datetime\n    3  from django.contrib import admin\n    .\n    7  \n    8  \n    9: def export_to_csv(modeladmin, request, queryset):\n   10      opts = modeladmin.model._meta\n   11:     response = HttpResponse(content_type='text/csv')\n   12:     response['Content-Disposition'] = 'attachment; filename={}.csv'.format(opts.verbose_name)\n   13:     writer = csv.writer(response)\n   14  \n   15      fields = [field for field in opts.get_fields() if not field.many_to_many and not field.one_to_many]\n   ..\n   26          writer.writerow(data_row)\n   27      return response\n   28: export_to_csv.short_description = 'Export to CSV'\n   29  \n   30  \n   ..\n   61      list_filter = ['paid', 'created', 'updated']\n   62      inlines = [OrderItemInline]\n   63:     actions = [export_to_csv]\n   64  \n   65  admin.site.register(Order, OrderAdmin)\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\tcl\\tk8.6\\icons.tcl:\n   14  \n   15  image create photo ::tk::icons::warning -data {\n   16:     iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABSZJREFU\n   17      WIXll1toVEcYgL+Zc87u2Yu7MYmrWRuTJuvdiMuqiJd4yYKXgMQKVkSjFR80kFIVJfWCWlvpg4h9\n   18      8sXGWGof8iKNICYSo6JgkCBEJRG8ImYThNrNxmaTeM7pQ5IlJkabi0/9YZhhZv7///4z/8zPgf+7\n   ..\n   42  \n   43  image create photo ::tk::icons::error -data {\n   44:     iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABiRJREFU\n   45      WIXFl11sHFcVgL97Z/bX693sbtd2ipOqCU7sQKukFYUigQgv/a+hoZGoqipvfQKpAsEDD0hIvCHE\n   46      j/pQ3sIDUdOiIqUyqXioEFSUhqit7cRJFJpEruxs1mt77Z3d2Z259/KwM5vZXTtOERJXOrozZ+6e\n   47:     852fuXcW/s9D3O3Cs1Bow1Nx234BKQ9qpYpK6yFLSseScsVoveApdUrAzNOw9j8DOAMTtmX9RsM3\n   48      SqOjevcXDqUzu8dI5AvEc8O0axu4q6s4yzdZvnCxUSmXLWHMXzxjXpmGq/81wGmIZ6T8NXDi8w8d\n   49      id//+GPS8j1YWQXHgVYbfA/sGCRiMDQExTzKtvn3zDv6k9m5FsacXNT6+y+D95kAZqCEEO/cMzIy\n   ..\n  111  \n  112  image create photo ::tk::icons::question -data {\n  113:     iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAACG5JREFU\n  114      WIXFl3twVdUVxn97n3Nubm7euZcghEdeBBICEQUFIgVECqIo1uJMp3WodqyjMzpjZ7TTh20cK31N\n  115      /2jL2FYdKXaqRcbnDKGpoBFaAY1BHgHMgyRKQkJy87yv3Nyzd/84594k1RlppzPumTXn3Dl3r/Wd\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\tcl\\tk8.6\\tkfbox.tcl:\n   57      if {![info exists ::tk::Priv(folderImage)]} {\n   58  \tset ::tk::Priv(folderImage) [image create photo -data {\n   59: \t    iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiA\n   60  \t    AAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBl\n   61  \t    Lm9yZ5vuPBoAAAHCSURBVDiNpZAxa5NRFIafc+9XLCni4BC6FBycMnbrLpkcgtDVX6\n\n76 matches across 22 files\n\n\nSearching 1845 files for \"category_slug\"\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\shop\\urls.py:\n    5  urlpatterns = [\n    6      url(r'^$', views.product_list, name='product_list'),\n    7:     url(r'^(?P<category_slug>[-\\w]+)/$', views.product_list, name='product_list_by_category'),\n    8      url(r'^(?P<id>\\d+)/(?P<slug>[-\\w]+)/$', views.product_detail, name='product_detail'),\n    9  ]\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\shop\\views.py:\n    4  \n    5  \n    6: def product_list(request, category_slug=None):\n    7      category = None\n    8      categories = Category.objects.all()\n    9      products = Product.objects.filter(available=True)\n   10:     if category_slug:\n   11:         category = get_object_or_404(Category, slug=category_slug)\n   12          products = products.filter(category=category)\n   13      return render(request, 'shop/product/list.html', {'category': category,\n\n4 matches across 2 files\n\n\nSearching 1845 files for \"category_slug\"\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\shop\\urls.py:\n    5  urlpatterns = [\n    6      url(r'^$', views.product_list, name='product_list'),\n    7:     url(r'^(?P<category_slug>[-\\w]+)/$', views.product_list, name='product_list_by_category'),\n    8      url(r'^(?P<id>\\d+)/(?P<slug>[-\\w]+)/$', views.product_detail, name='product_detail'),\n    9  ]\n\nC:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop\\shop\\views.py:\n    4  \n    5  \n    6: def product_list(request, category_slug=None):\n    7      category = None\n    8      categories = Category.objects.all()\n    9      products = Product.objects.filter(available=True)\n   10:     if category_slug:\n   11:         category = get_object_or_404(Category, slug=category_slug)\n   12          products = products.filter(category=category)\n   13      return render(request, 'shop/product/list.html', {'category': category,\n\n4 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 15570,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "myshop/myshop/urls.py",
+			"settings":
+			{
+				"buffer_size": 725,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/orders/views.py",
+			"settings":
+			{
+				"buffer_size": 2303,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/sukhm/Shopping Site/shop_virt",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/cart",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/media",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/media/products",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/media/products/2018",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/media/products/2018/07",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/myshop",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/templates",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/templates/shop",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/templates/shop/product"
+	],
+	"file_history":
+	[
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/orders/models.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/templates/orders/order/create.html",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/cart/templates/cart/detail.html",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/cart/templates/cart/detail.html",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/coupons/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/coupons/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/coupons/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/coupons/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/cart/views.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/models.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/cart/cart.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/cart/cart.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/coupons/models.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/myshop/settings.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/orders/templates/orders/order/create.html",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/coupons/forms.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/cart/views.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/cart/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/cart/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/myshop/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/myshop/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/orders/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/coupons/admin.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/coupons/admin.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/coupons/models.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/models.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/payment/apps.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/apps.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/payment/views.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/tasks.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/admin.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/manage.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/payment/signals.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/myshop/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/myshop/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/payment/__init__.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/orders/admin.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/orders/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/payment/__init__.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/payment/apps.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/orders/views.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/payment/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/payment/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/myshop/__init__.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/payment/migrations/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/orders/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/payment/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/cart/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/myshop/settings.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/myshop/settings.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/myshop/settings.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/manage.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/myshop/__init__.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/templates/shop/product/detail.html",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/cart/forms.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/shop/admin.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/admin.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/shop/urls.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/views.py",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/templates/shop/base.html",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/templates/shop/product/list.html",
+		"/C/Users/sukhm/Shopping Site/shop_virt/myshop/shop/urls.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/shop/views.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/shop/models.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/cart/models.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 2/myshop/shop/models.py",
+		"/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 1/myshop/cart/forms.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"C:\\Users\\sukhm\\Shopping Site\\shop_virt\\myshop"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"category_slug",
+			"csv"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/orders/templates/orders/order/create.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								686,
+								686
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "myshop/orders/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1532,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1125,
+								1125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "myshop/orders/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								811,
+								811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15570,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										200,
+										203
+									],
+									[
+										359,
+										362
+									],
+									[
+										652,
+										655
+									],
+									[
+										742,
+										745
+									],
+									[
+										973,
+										976
+									],
+									[
+										1033,
+										1036
+									],
+									[
+										1099,
+										1102
+									],
+									[
+										1149,
+										1152
+									],
+									[
+										1575,
+										1578
+									],
+									[
+										1852,
+										1855
+									],
+									[
+										2234,
+										2237
+									],
+									[
+										2745,
+										2748
+									],
+									[
+										2756,
+										2759
+									],
+									[
+										2934,
+										2937
+									],
+									[
+										3269,
+										3272
+									],
+									[
+										3526,
+										3529
+									],
+									[
+										3850,
+										3853
+									],
+									[
+										3946,
+										3949
+									],
+									[
+										4002,
+										4005
+									],
+									[
+										4133,
+										4136
+									],
+									[
+										4264,
+										4267
+									],
+									[
+										4447,
+										4450
+									],
+									[
+										4573,
+										4576
+									],
+									[
+										4583,
+										4586
+									],
+									[
+										4773,
+										4776
+									],
+									[
+										4832,
+										4835
+									],
+									[
+										4966,
+										4969
+									],
+									[
+										4976,
+										4979
+									],
+									[
+										5061,
+										5064
+									],
+									[
+										5108,
+										5111
+									],
+									[
+										5475,
+										5478
+									],
+									[
+										5486,
+										5489
+									],
+									[
+										5756,
+										5759
+									],
+									[
+										5991,
+										5994
+									],
+									[
+										6229,
+										6232
+									],
+									[
+										6544,
+										6547
+									],
+									[
+										6845,
+										6848
+									],
+									[
+										6908,
+										6911
+									],
+									[
+										7245,
+										7248
+									],
+									[
+										7546,
+										7549
+									],
+									[
+										7609,
+										7612
+									],
+									[
+										7943,
+										7946
+									],
+									[
+										8244,
+										8247
+									],
+									[
+										8307,
+										8310
+									],
+									[
+										8559,
+										8562
+									],
+									[
+										8744,
+										8747
+									],
+									[
+										8931,
+										8934
+									],
+									[
+										8998,
+										9001
+									],
+									[
+										9277,
+										9280
+									],
+									[
+										9504,
+										9507
+									],
+									[
+										9638,
+										9641
+									],
+									[
+										9705,
+										9708
+									],
+									[
+										9981,
+										9984
+									],
+									[
+										10201,
+										10204
+									],
+									[
+										11066,
+										11069
+									],
+									[
+										11176,
+										11179
+									],
+									[
+										11307,
+										11310
+									],
+									[
+										11383,
+										11386
+									],
+									[
+										11434,
+										11437
+									],
+									[
+										11665,
+										11668
+									],
+									[
+										11700,
+										11703
+									],
+									[
+										11854,
+										11857
+									],
+									[
+										12106,
+										12109
+									],
+									[
+										12437,
+										12440
+									],
+									[
+										12694,
+										12697
+									],
+									[
+										13035,
+										13038
+									],
+									[
+										13490,
+										13493
+									],
+									[
+										13905,
+										13918
+									],
+									[
+										14202,
+										14215
+									],
+									[
+										14372,
+										14385
+									],
+									[
+										14446,
+										14459
+									],
+									[
+										14844,
+										14857
+									],
+									[
+										15141,
+										15154
+									],
+									[
+										15311,
+										15324
+									],
+									[
+										15385,
+										15398
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								15570,
+								15570
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "myshop/myshop/urls.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/sukhm/Downloads/Ex_Files_Django_3_Online_Shop/Ex_Files_Django_3_Online_Shop/Exercise Files/Chapter 3/myshop/orders/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								585,
+								585
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 85.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "myshopp.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
